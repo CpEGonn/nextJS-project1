@@ -1,14 +1,11 @@
 import EventCard from "@/components/EventCard";
 import ExploreBtn from "@/components/ExploreBtn";
 import { IEvent } from "@/database";
-import { cacheLife } from "next/cache";
 
-const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL;
+import { API_BASE } from "@/lib/base-url";
 
 const Page = async () => {
-  'use cache';
-  cacheLife('hours');
-  const response = await fetch(`${BASE_URL}/api/events`, { cache: "no-store" });
+  const response = await fetch(`${API_BASE}/api/events`, { cache: "no-store" });
 
   if (!response.ok) {
     throw new Error("Failed to load events");
