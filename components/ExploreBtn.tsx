@@ -21,8 +21,9 @@ const ExploreBtn = () => {
         <Image
           src="/icons/arrow-down.svg"
           alt="arrow-down"
-          width={24}
-          height={24}
+          height={14}
+          width={14}
+          style={{ width: "auto", height: "auto" }}
         />
       </a>
     </button>
