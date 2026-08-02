@@ -26,23 +26,26 @@ const EventCard = ({ title, image, slug, location, date, time }: Props) => {
         width={410}
         height={300}
         className="poster"
+        style={{ width: "auto", height: "auto" }}
+        loading="eager"
+        fetchPriority="high"
       />
       <div className="flex flex-row gap-2"></div>
       <p className="title">{title}</p>
 
       <div className="flex flex-row gap-2">
-          <Image src="/icons/pin.svg" alt="location" height={14} width={14} />
+          <Image src="/icons/pin.svg" alt="location" height={14} width={14} style={{ width: "auto", height: "auto" }} />
           <p>{location}</p>
         </div>
 
       <div className="datetime">
         <div>
-          <Image src="/icons/calendar.svg" alt="date" height={14} width={14} />
+          <Image src="/icons/calendar.svg" alt="date" height={14} width={14} style={{ width: "auto", height: "auto" }} />
           <p>{date}</p>
         </div>
 
         <div>
-          <Image src="/icons/clock.svg" alt="time" height={14} width={14} />
+          <Image src="/icons/clock.svg" alt="time" height={14} width={14} style={{ width: "auto", height: "auto" }} />
           <p>{time}</p>
         </div>
       </div>
@@ -51,3 +54,4 @@ const EventCard = ({ title, image, slug, location, date, time }: Props) => {
 };
 
 export default EventCard;
+
